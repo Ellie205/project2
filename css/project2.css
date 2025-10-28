@@ -102,6 +102,45 @@ body{
     color: #252528;
 }
 
+/*Home*/
+/*Hero-section*/
+.hero-container{
+    background-color: #FCFCFC;
+}
+.hero-image{
+    width: 250px;
+    clip-path: circle(40% at 50% 46%);
+}
+.hero-container h1{
+    font-family: "Crete Round";
+}
+.lead{
+    font-size: 1.1rem;
+}
+.btn-primary{
+    background-color: #B974B0;
+    border: none;
+    font-family: "Outfit", sans-serif;
+    transition: all 0.5s ease;
+}
+.btn-primary:hover{
+    background-color: #BADEDD;
+    color: #252528;
+}
+.btn-primary:active{
+    background-color: #B974B0!important;
+    color: #FCFCFC!important;
+}
+/*Cards*/
+.card{
+    width: 86%;
+    height: auto;
+    background-color: #FCFCFC;
+    border: none;
+    box-shadow: 2px 2px 15px 1px #d2d2d2; 
+}
+
+
 @media only screen and (min-width: 992px){
     .mb-lg-0 {
         margin-bottom: 0 !important;
