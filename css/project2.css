@@ -10,6 +10,9 @@ body{
     color: #252528;
     font-family: "Noto Sans", sans-serif;
 }
+h1, h2, h3, h4, h5, h6{
+    font-family: "Outfit", sans-serif;
+}
 
 /*Navigatie*/
 .navbar{
@@ -101,6 +104,57 @@ body{
     background-color: #94CCCB;
     color: #252528;
 }
+/*Footer*/
+footer{
+    background-color: #B974B0;
+    min-height: 260px;
+    position: relative;
+    color: #FCFCFC;
+    font-size: 14px;
+}
+#footer-achtergrond{
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+/* #footer-lists{
+    margin-top: 35px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: flex-start;
+    gap: 150px;
+}
+#footer-lists ul{
+    list-style: none;
+}
+#footer-lists ul:first-child{
+    justify-self: end;
+}
+#footer-lists h4{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+#footer-lists a{
+    color: #FCFCFC;
+    text-decoration: none;
+    line-height: 2.2;
+    transition: all 0.5s ease;
+}
+#footer-lists a:hover{
+    color: #94CCCB;
+}
+#footer-icon{
+    font-size: 18px;
+}
+#copyright{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
 
 /*Home*/
 /*Hero-section*/
