@@ -6,3 +6,7 @@ navbarToggler.addEventListener("click", () => {
   navbarIcon.classList.toggle("bi-list");
   navbarIcon.classList.toggle("bi-x");
 });
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});

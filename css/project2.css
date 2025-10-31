@@ -12,6 +12,7 @@ body{
 }
 h1, h2, h3, h4, h5, h6{
     font-family: "Outfit", sans-serif;
+    font-weight: 600;
 }
 
 /*Navigatie*/
@@ -159,7 +160,8 @@ footer{
 /*Home*/
 /*Hero-section*/
 .hero-container{
-    background-color: #FCFCFC;
+    background-color: #BADEDD;
+    box-shadow: inset 0px 0px 8px 1px #999992;
 }
 .hero-image{
     width: 250px;
@@ -178,8 +180,7 @@ footer{
     transition: all 0.5s ease;
 }
 .btn-primary:hover{
-    background-color: #BADEDD;
-    color: #252528;
+    background-color: #8f5a88;
 }
 .btn-primary:active{
     background-color: #B974B0!important;
@@ -194,8 +195,210 @@ footer{
     box-shadow: 2px 2px 15px 1px #d2d2d2; 
 }
 
+/*CV*/
+.bg-lightblue{
+    background-color: #BADEDD;
+}
+.foto-cv{
+    width: 180px;
+}
+/*Quote*/
+.blockquote{
+    background-color: #B974B0;
+    color: #FCFCFC;
+}
+.blockquote p{
+    font-family: "Crete Round", sans-serif;
+}
+.blockquote cite{
+    font-size: 16px;
+}
 
-@media only screen and (min-width: 992px){
+/*Ervaring*/
+/*Opleiding*/
+#opleiding{
+    height: 460px;
+    background-color: #BADEDD;
+}
+.ervaring-container{
+    height: 80%;
+    gap: 80px;
+}
+.ervaring-titel{
+    font-size: 24px!important;
+    margin-bottom: 20px;
+    padding-top: 40px;
+}
+.tijdlijn{
+    width: 35%;
+    height: 93%;
+}
+.tijdlijn::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #252528;
+    border-radius: 15px;
+    top: 20px;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.tijdlijn-links, .tijdlijn-rechts{
+    width: 45%;
+    height: auto;
+    padding: 20px 10px;
+}
+.tijdlijn-links h3, .tijdlijn-rechts h3{
+    margin: 0;
+    font-size: 20px!important;
+}
+.tijdlijn-links p, .tijdlijn-rechts p{
+    margin: 0;
+    font-size: 14px!important;
+}
+.tijdlijn-links{
+    left: 0;
+    margin-right: 10px;
+}
+.tijdlijn-rechts{
+    left: 50%;
+    margin-left: 20px;
+}
+.tijdlijn-bolletje{
+    width: 22px;
+    height: 22px;
+    background-color: #B974B0;
+    border: 3px solid #BADEDD;
+    left: calc(50%);
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.tijdlijn-bolletje.netwerken{
+    top: 13%;
+}
+.tijdlijn-bolletje.webontwikkelaar{
+    top: 43.5%;
+}
+.tijdlijn-bolletje.programmeren{
+    top: 74.5%;
+}
+#diplomas, #werk-uitleg{
+    width: 35%;
+    height: 100%;
+}
+#diplomas li{
+    margin: 20px 0;
+    gap: 20px;
+    font-size: 15px;
+}
+.diploma-icon{
+    font-size: 30px;
+}
+/*Werkervaring*/
+#werkervaring{
+    height: 480px;
+    width: 100%;
+}
+#werk-uitleg h4{
+    font-size: 18px;
+    margin-top: 35px;
+}
+#werk-uitleg p{
+    margin-bottom: 40px;
+}
+.tijdlijn.werk::after{
+    background-color: #D0D0D0;
+    bottom: 20px;
+}
+.tijdlijn-bolletje.werk{
+    border: 3px solid #FCFCFC;
+    background-color: #BADEDD;
+}
+.tijdlijn-bolletje.jobstudent{
+    top: 15%;
+}
+.tijdlijn-bolletje.digidokter{
+    top: 48.5%;
+}
+.tijdlijn-bolletje.coderdojo{
+    top: 78%;
+}
+
+@media only screen and (max-width: 992px){
+    /*Ervaring*/
+    /*Opleiding*/
+    #opleiding, #werkervaring{
+        height: auto;
+    }
+    .ervaring-container{
+        height: 100%;
+        gap: 45px;
+    }
+    .ervaring-titel{
+        margin-bottom: 40px;
+    }
+    .tijdlijn{
+        width: 100%;
+        height: 50%;
+    }
+    .tijdlijn::after{
+        top: 5px;
+        bottom: 5px;
+    }
+    .tijdlijn-links, .tijdlijn-rechts{
+        width: 46%;
+        padding: 15px 5px;
+    }
+    .tijdlijn-bolletje.netwerken{
+        top: 12.5%;
+    }
+    .tijdlijn-bolletje.webontwikkelaar{
+        top: 50%;
+    }
+    .tijdlijn-bolletje.programmeren{
+        top: 81.2%;
+    }
+    #diplomas, #werk-uitleg{
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    #diplomas li{
+        margin: 10px auto;
+        width: 90%;
+        gap: 20px;
+        font-size: 15px;
+    }
+    .diploma-icon{
+        font-size: 30px;
+    }
+    /*Werkervaring*/
+    .tijdlijn-links h3:nth-child(2){
+        overflow-wrap: break-word;
+        padding-left: 5px;
+    }
+    .tijdlijn.werk::after{
+        top: 5px;
+        bottom: 5px;
+    }
+    .tijdlijn-bolletje.jobstudent{
+        top: 18%;
+    }
+    .tijdlijn-bolletje.digidokter{
+        top: 54.2%;
+    }
+    .tijdlijn-bolletje.coderdojo{
+        top: 82.5%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .bg-lightblue{
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 1200px){
     .mb-lg-0 {
         margin-bottom: 0 !important;
     }
@@ -204,5 +407,9 @@ footer{
     }
     .navbar-collapse{
         margin-right: 250px;
+    }
+    .blockquote{
+        width: 70%;
+        margin: 0 auto;
     }
 }
