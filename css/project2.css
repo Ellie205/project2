@@ -108,10 +108,11 @@ h1, h2, h3, h4, h5, h6{
 /*Footer*/
 footer{
     background-color: #B974B0;
-    min-height: 260px;
+    min-height: 280px;
     position: relative;
     color: #FCFCFC;
     font-size: 14px;
+    overflow-x: hidden;
 }
 #footer-achtergrond{
     height: 80%;
@@ -120,42 +121,20 @@ footer{
     transform: translateY(-50%);
     left: 0;
 }
-/* #footer-lists{
-    margin-top: 35px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: flex-start;
-    gap: 150px;
-}
-#footer-lists ul{
-    list-style: none;
-}
-#footer-lists ul:first-child{
-    justify-self: end;
-}
-#footer-lists h4{
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-#footer-lists a{
-    color: #FCFCFC;
-    text-decoration: none;
+footer li a{
+    color: #FCFCFC!important;
     line-height: 2.2;
     transition: all 0.5s ease;
 }
-#footer-lists a:hover{
-    color: #94CCCB;
+footer li a:hover{
+    color: #94CCCB!important;
+}
+footer p{
+    margin: 0;
 }
 #footer-icon{
     font-size: 18px;
 }
-#copyright{
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 
 /*Home*/
 /*Hero-section*/
@@ -193,6 +172,11 @@ footer{
     background-color: #FCFCFC;
     border: none;
     box-shadow: 2px 2px 15px 1px #d2d2d2; 
+}
+.bi-arrow-right{
+    display: inline-block;
+    margin-left: 5px;
+    animation: bounce-right 2.5s infinite ease-in-out;
 }
 
 /*CV*/
@@ -326,9 +310,67 @@ footer{
     top: 78%;
 }
 
+/*Contact*/
+.contact-gegevens li{
+    margin: 16px 0;
+}
+.contact-gegevens li a{
+    color: #252528;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.contact-gegevens li a:hover{
+    color: #B974B0;
+}
+.contact-icon{
+    color: #B974B0;
+}
+.icon-link{
+    color: #B974B0;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+.icon-link:hover{
+    color: #BADEDD;
+}
+/*Formulier*/
+.form-control, .form-select{
+    background-color: #BADEDD;
+    color: #252528;
+    border-radius: 18px;
+    padding: 7px 12px;
+    min-height: 30px;
+    border: none;
+    margin: 5px 0 20px 0;
+    font-family: "Noto Sans", sans-serif;
+}
+.form-control:focus, .form-select:focus{
+    background-color: #BADEDD;
+    color: #252528;
+    border: 1px solid #252528;
+    box-shadow: none;
+}
+.naam-container{
+    display: flex;
+    gap: 40px;
+}
+#verzenden{
+    background-color: #B974B0;
+    color: #FCFCFC;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+    border: none;
+    padding: 6px 22px;
+    transition: all 0.5s ease;
+}
+#verzenden:hover{
+    background-color: #BADEDD;
+    color: #252528;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 992px){
-    /*Ervaring*/
-    /*Opleiding*/
     #opleiding, #werkervaring{
         height: auto;
     }
@@ -397,6 +439,17 @@ footer{
     .bg-lightblue{
         width: 70%;
     }
+    .contact-container{
+        grid-template-columns: 50% 50%;
+    }
+    .contact-container div:first-child, .contact-container div:nth-child(2){
+        grid-column-start: 1;
+    }
+    .contact-container div:last-child{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
 }
 @media only screen and (min-width: 1200px){
     .mb-lg-0 {
@@ -411,5 +464,26 @@ footer{
     .blockquote{
         width: 70%;
         margin: 0 auto;
+    }
+}
+
+@keyframes bounce-right{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(3px);
+    }
+    20%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(3px);
+    }
+    40%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
